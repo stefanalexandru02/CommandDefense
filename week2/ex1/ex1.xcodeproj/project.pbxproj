@@ -10,6 +10,7 @@
 		D73A37C927D39117009A9C61 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D73A37C827D39117009A9C61 /* main.cpp */; };
 		D73A37D127D39143009A9C61 /* EnemyController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D73A37CF27D39143009A9C61 /* EnemyController.cpp */; };
 		D73A37D427D39196009A9C61 /* Enemy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D73A37D227D39196009A9C61 /* Enemy.cpp */; };
+		D73A37D727D39252009A9C61 /* EnemyStructure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D73A37D527D39252009A9C61 /* EnemyStructure.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		D73A37D027D39143009A9C61 /* EnemyController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = EnemyController.hpp; sourceTree = "<group>"; };
 		D73A37D227D39196009A9C61 /* Enemy.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Enemy.cpp; sourceTree = "<group>"; };
 		D73A37D327D39196009A9C61 /* Enemy.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Enemy.hpp; sourceTree = "<group>"; };
+		D73A37D527D39252009A9C61 /* EnemyStructure.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EnemyStructure.cpp; sourceTree = "<group>"; };
+		D73A37D627D39252009A9C61 /* EnemyStructure.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = EnemyStructure.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				D73A37D027D39143009A9C61 /* EnemyController.hpp */,
 				D73A37D227D39196009A9C61 /* Enemy.cpp */,
 				D73A37D327D39196009A9C61 /* Enemy.hpp */,
+				D73A37D527D39252009A9C61 /* EnemyStructure.cpp */,
+				D73A37D627D39252009A9C61 /* EnemyStructure.hpp */,
 			);
 			path = ex1;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 			files = (
 				D73A37D427D39196009A9C61 /* Enemy.cpp in Sources */,
 				D73A37D127D39143009A9C61 /* EnemyController.cpp in Sources */,
+				D73A37D727D39252009A9C61 /* EnemyStructure.cpp in Sources */,
 				D73A37C927D39117009A9C61 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

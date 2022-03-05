@@ -1,10 +1,6 @@
 #include <iostream>
 #include "EnemyController.hpp"
-
-struct Point{
-    int x;
-    int y;
-};
+#include "EnemyStructure.hpp"
 
 int main()
 {
