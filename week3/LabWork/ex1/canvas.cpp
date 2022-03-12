@@ -1,11 +1,9 @@
-#include "canvas.h"
+#include "canvas.hpp"
 #include <iostream>
 #include <cstdarg>
-#include <iostream>
 
 Canvas::Canvas(int lines, int columns)
 {
-    int a[10][10];
     m = new char*[lines];
     for (int i = 0; i < lines; i++)
     {
@@ -13,7 +11,7 @@ Canvas::Canvas(int lines, int columns)
     }
     this->lines = lines;
     this->columns = columns;
-    clear();
+    Clear();
 }
 
 Canvas::~Canvas()
@@ -23,12 +21,12 @@ Canvas::~Canvas()
     delete[] m;
 }
 
-void Canvas::set_pixel(int x, int y, char value)
+void Canvas::SetPoint(int x, int y, char value)
 {
     m[x][y] = value;
 }
 
-void Canvas::set_pixels(int count, ...)
+void Canvas::SetPoints(int count, ...)
 {
     std::va_list args;
     va_start(args, count);
@@ -39,21 +37,95 @@ void Canvas::set_pixels(int count, ...)
         x     = va_arg(args, int);
         y     = va_arg(args, int);
         value = va_arg(args, int);
-        set_pixel(x, y, value);
+        SetPoint(x, y, value);
     }
 
-    va_end(args);
-    // vaargs variadic args c++
+    va_end(args); 
 }
 
-void Canvas::clear()
+void Canvas::DrawRect(int left, int top, int right, int bottom, char value)
+{
+    for(int i = left; i <= right; i++)
+    {
+        SetPoint(top, i, value);
+        SetPoint(bottom, i, value);
+    }
+    for(int i = top; i <= bottom; i++)
+    {
+        SetPoint(i, left, value);
+        SetPoint(i, right, value);
+    }
+}
+
+void Canvas::FillRect(int left, int top, int right, int bottom, char value)
+{
+    for(int i = top; i <= bottom; i++)
+        for(int j = left; j <= right; j++)
+            SetPoint(i, j, value);
+}
+
+void Canvas::DrawLine(int x1, int y1, int x2, int y2, char value)
+{
+    int dx, dy, p, x, y;
+    dx=x2-x1;
+    dy=y2-y1;
+    x=x1;
+    y=y1;
+    p=2*dy-dx;
+    while(x<x2)
+    {
+        if(p>=0)
+        {
+            SetPoint(x,y,value);
+            y=y+1;
+            p=p+2*dy-2*dx;
+        }
+        else
+        {
+            SetPoint(x,y,value);
+            p=p+2*dy;
+        }
+        x=x+1;
+    }
+}
+
+void Canvas::DrawCircle(int x, int y, int ray, char value)
+{
+    for(int i = x - ray; i <= x + ray; i++)
+    {
+       for(int j = y - ray; j <= y + ray; j++)
+       {
+           int p = (i-ray)*(i-ray) + (j-ray)*(j-ray);
+           if(p == ray*ray ||  p == ray*ray - 1 || p == ray*ray - 2)
+           {
+               SetPoint(i, j, value);
+           }
+       }
+    }
+}
+
+void Canvas::FillCircle(int x, int y, int ray, char value)
+{
+    for(int i = x - ray; i <= x + ray; i++)
+    {
+       for(int j = y - ray; j <= y + ray; j++)
+       {
+           if((i-ray)*(i-ray) + (j-ray)*(j-ray) <= ray*ray)
+           {
+               SetPoint(i, j, value);
+           }
+       }
+    }
+}
+
+void Canvas::Clear()
 {
     for (int i = 0; i < lines; i++)
         for (int j = 0; j < columns; j++)
             m[i][j] = ' ';
 }
 
-void Canvas::print() const
+void Canvas::Print() const
 {
     for (int i = 0; i < lines; i++)
     {

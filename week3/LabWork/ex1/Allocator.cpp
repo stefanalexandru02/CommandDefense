@@ -1,5 +1,8 @@
-#include "Allocator.h"
+#include "Allocator.hpp"
 #include <cstring>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 #define DEFINE_FUNCTION_ALLOCATOR(type) \
 type* Allocator::alloc(type x)                                                                                     \
@@ -37,8 +40,19 @@ char* Allocator::alloc(const char* string)
     char* ptr = (char*)alloc_raw(strlen(string) + 1);
     if (ptr==nullptr)
         return nullptr;
-    strcpy_s(ptr, strlen(string) + 1, string);
+    memcpy(ptr, string, strlen(string) + 1);
     offset += strlen(string) + 1;
+    return ptr;
+}
+
+char* Allocator::alloc(const char* string1, const char* string2)
+{
+    char* ptr = (char*)alloc_raw(strlen(string1) + strlen(string2) + 1);
+    if (ptr==nullptr)
+        return nullptr;
+    memcpy(ptr, string1, strlen(string1)) ;
+    memcpy(ptr + strlen(string1), string2, strlen(string2) + 1);
+    offset += (strlen(string1) + strlen(string2) + 1);
     return ptr;
 }
 
