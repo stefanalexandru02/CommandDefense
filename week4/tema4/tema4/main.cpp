@@ -6,9 +6,16 @@
 //
 
 #include <iostream>
+#include "Sort.hpp"
+
+using namespace std;
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    
+    Sort s(10, 1, 2, 99, 4, 5, 6, 7, 8, 9, 10);
+    s.BubbleSort(false);
+    s.Print();
+    s.InsertSort(true);
+    s.Print();
     return 0;
 }
