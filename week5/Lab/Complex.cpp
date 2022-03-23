@@ -67,7 +67,21 @@ bool operator!=(const Complex& l, const Complex& r)
 
 std::ostream& operator<<(std::ostream& out, const Complex& complex)
 {
-    out << complex.real() << ',' << complex.imag();
+    if (complex.real() == 0 && complex.imag() == 0)
+        return out;
+    if (complex.is_real())
+        out << complex.real();
+    else
+    {
+        if (complex.real() == 0)
+        {
+            out << complex.imag() << "i";
+        }
+        else
+        {
+            out << complex.real() << " " << complex.imag() <<'i';
+        }
+    }
     return out;
 }
 
