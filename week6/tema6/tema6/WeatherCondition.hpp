@@ -1,12 +1,9 @@
-//
-//  WeatherCondition.hpp
-//  tema6
-//
-//  Created by Stefan Alexandru on 25.03.2022.
-//
-
 #ifndef WeatherCondition_h
 #define WeatherCondition_h
 
+enum Weather
+{
+    Rain, Sunny, Snow
+};
 
-#endif /* WeatherCondition_h */
+#endif

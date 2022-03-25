@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		D75FC0B927EE31FC0055A126 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D75FC0B827EE31FC0055A126 /* main.cpp */; };
+		D75FC0C327EE32B20055A126 /* Circuit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D75FC0C127EE32B20055A126 /* Circuit.cpp */; };
+		D75FC0C727EE36330055A126 /* Dacia.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D75FC0C527EE36330055A126 /* Dacia.cpp */; };
+		D75FC0CA27EE36410055A126 /* Toyota.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D75FC0C827EE36410055A126 /* Toyota.cpp */; };
+		D75FC0CD27EE364B0055A126 /* Mercedes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D75FC0CB27EE364B0055A126 /* Mercedes.cpp */; };
+		D75FC0D027EE36550055A126 /* Ford.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D75FC0CE27EE36550055A126 /* Ford.cpp */; };
+		D75FC0D327EE36670055A126 /* Mazda.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D75FC0D127EE36670055A126 /* Mazda.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +31,20 @@
 /* Begin PBXFileReference section */
 		D75FC0B527EE31FC0055A126 /* tema6 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = tema6; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75FC0B827EE31FC0055A126 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		D75FC0BF27EE32410055A126 /* Car.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Car.hpp; sourceTree = "<group>"; };
+		D75FC0C027EE32860055A126 /* WeatherCondition.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = WeatherCondition.hpp; sourceTree = "<group>"; };
+		D75FC0C127EE32B20055A126 /* Circuit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Circuit.cpp; sourceTree = "<group>"; };
+		D75FC0C227EE32B20055A126 /* Circuit.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Circuit.hpp; sourceTree = "<group>"; };
+		D75FC0C527EE36330055A126 /* Dacia.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Dacia.cpp; sourceTree = "<group>"; };
+		D75FC0C627EE36330055A126 /* Dacia.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Dacia.hpp; sourceTree = "<group>"; };
+		D75FC0C827EE36410055A126 /* Toyota.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Toyota.cpp; sourceTree = "<group>"; };
+		D75FC0C927EE36410055A126 /* Toyota.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Toyota.hpp; sourceTree = "<group>"; };
+		D75FC0CB27EE364B0055A126 /* Mercedes.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Mercedes.cpp; sourceTree = "<group>"; };
+		D75FC0CC27EE364B0055A126 /* Mercedes.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Mercedes.hpp; sourceTree = "<group>"; };
+		D75FC0CE27EE36550055A126 /* Ford.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Ford.cpp; sourceTree = "<group>"; };
+		D75FC0CF27EE36550055A126 /* Ford.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Ford.hpp; sourceTree = "<group>"; };
+		D75FC0D127EE36670055A126 /* Mazda.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Mazda.cpp; sourceTree = "<group>"; };
+		D75FC0D227EE36670055A126 /* Mazda.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Mazda.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +77,31 @@
 		D75FC0B727EE31FC0055A126 /* tema6 */ = {
 			isa = PBXGroup;
 			children = (
+				D75FC0C427EE36260055A126 /* CarTypes */,
 				D75FC0B827EE31FC0055A126 /* main.cpp */,
+				D75FC0BF27EE32410055A126 /* Car.hpp */,
+				D75FC0C027EE32860055A126 /* WeatherCondition.hpp */,
+				D75FC0C127EE32B20055A126 /* Circuit.cpp */,
+				D75FC0C227EE32B20055A126 /* Circuit.hpp */,
 			);
 			path = tema6;
+			sourceTree = "<group>";
+		};
+		D75FC0C427EE36260055A126 /* CarTypes */ = {
+			isa = PBXGroup;
+			children = (
+				D75FC0C527EE36330055A126 /* Dacia.cpp */,
+				D75FC0C627EE36330055A126 /* Dacia.hpp */,
+				D75FC0C827EE36410055A126 /* Toyota.cpp */,
+				D75FC0C927EE36410055A126 /* Toyota.hpp */,
+				D75FC0CB27EE364B0055A126 /* Mercedes.cpp */,
+				D75FC0CC27EE364B0055A126 /* Mercedes.hpp */,
+				D75FC0CE27EE36550055A126 /* Ford.cpp */,
+				D75FC0CF27EE36550055A126 /* Ford.hpp */,
+				D75FC0D127EE36670055A126 /* Mazda.cpp */,
+				D75FC0D227EE36670055A126 /* Mazda.hpp */,
+			);
+			name = CarTypes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +161,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D75FC0D027EE36550055A126 /* Ford.cpp in Sources */,
+				D75FC0D327EE36670055A126 /* Mazda.cpp in Sources */,
 				D75FC0B927EE31FC0055A126 /* main.cpp in Sources */,
+				D75FC0C327EE32B20055A126 /* Circuit.cpp in Sources */,
+				D75FC0C727EE36330055A126 /* Dacia.cpp in Sources */,
+				D75FC0CA27EE36410055A126 /* Toyota.cpp in Sources */,
+				D75FC0CD27EE364B0055A126 /* Mercedes.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

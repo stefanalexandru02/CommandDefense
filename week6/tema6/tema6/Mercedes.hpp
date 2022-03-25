@@ -1,13 +1,22 @@
-//
-//  Mercedes.hpp
-//  tema6
-//
-//  Created by Stefan Alexandru on 25.03.2022.
-//
-
 #ifndef Mercedes_hpp
 #define Mercedes_hpp
 
+#include "Car.hpp"
 #include <stdio.h>
 
-#endif /* Mercedes_hpp */
+class Mercedes : public Car
+{
+private:
+    virtual int GetRemainingFuel();
+    virtual int GetCurrentSpeed(Weather weather);
+public:
+    Mercedes();
+    virtual void RunEpisode(Weather weather, int track_distance);
+    virtual CarStatus GetStatus();
+    virtual const char* GetName();
+    virtual int GetAverageSpeed(Weather weather) { return average_speed[weather]; }
+    virtual int GetCurrentEpisode() {return current_episode; }
+    virtual int GetElapsedDistance() {return elapsed_distance; }
+};
+
+#endif
