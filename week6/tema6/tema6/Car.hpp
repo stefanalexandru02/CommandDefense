@@ -19,8 +19,8 @@ private:
     
     // Completate deoarece o implementare de tip placeholder este
     // necesara pentru compilare
-    virtual int GetRemainingFuel() { return fuel_capacity; }
-    virtual int GetCurrentSpeed(Weather weather) {return average_speed[weather]; }
+    virtual int GetRemainingFuel() = 0;
+    virtual int GetCurrentSpeed(Weather weather) = 0;
 protected:
     int fuel_capacity;
     int fuel_consumption;
