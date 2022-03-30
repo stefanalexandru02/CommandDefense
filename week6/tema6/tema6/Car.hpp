@@ -17,8 +17,6 @@ private:
     // dar le voi implementa in clasele aferent deoarece
     // asa specifica cerinta
     
-    // Completate deoarece o implementare de tip placeholder este
-    // necesara pentru compilare
     virtual int GetRemainingFuel() = 0;
     virtual int GetCurrentSpeed(Weather weather) = 0;
 protected:
