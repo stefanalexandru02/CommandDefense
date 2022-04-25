@@ -1,14 +1,35 @@
-//
-//  main.cpp
-//  homework
-//
-//  Created by Stefan Alexandru on 25.04.2022.
-//
+#include "Map.hpp"
 
-#include <iostream>
-
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+int main()
+{
+    Map<int, const char *> m;
+    m[10] = "C++";
+    m[20] = "test";
+    m[30] = "Poo";
+     for (auto[key, value, index] : m)
+     {
+         printf("Index:%d, Key=%d, Value=%s\n", index, key, value);
+     }
+     m[20] = "result";
+     for (auto[key, value, index] : m)
+     {
+         printf("Index:%d, Key=%d, Value=%s\n", index, key, value);
+     }
+    
+    /*
+     Map<int, const char*> p;
+     p[30] = "Poo";
+     p[10] = "C++";
+     bool includes = m.Includes(p);
+     if(includes)
+     {
+         printf("M includes P\n");
+     }
+     else
+     {
+         printf("M does not include P\n");
+     }
+     */
+    
     return 0;
 }
